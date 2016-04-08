@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.cocos2dx.lib"
+    android:hardwareAccelerated="false"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="22" />
+    <!--
+         The application requires a camera.
+
+         NOTE: Any application that requests the CAMERA permission but does not
+         declare any camera features with the <uses-feature> element will be
+         assumed to use all camera features (auto-focus and flash). Thus, the
+         application will not be compatible with devices that do not support
+         all camera features. Please use <uses-feature> to declare only the
+         camera features that your application does need. For instance, if you
+         request the CAMERA permission, but you do not need auto-focus or
+         flash, then declare only the android.hardware.camera feature. The
+         other camera features that you do not request will no longer be
+         assumed as required.
+    -->
+    <!-- <uses-feature android:name="android.hardware.camera" /> -->
+
+    <user-feature android:name="android.hardware.camera2" />
+<!--         Add this permission to get access to the camera. -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+<!--         Add this permission to allow opening network sockets. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!--
+        Add this permission to check which network access properties (e.g.
+        active type: 3G/WiFi).
+    -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:label="libcocos2dx" >
+    </application>
+
+</manifest>

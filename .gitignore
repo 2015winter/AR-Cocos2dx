@@ -1,0 +1,15 @@
+#Mac
+proj.ios_mac/*
+
+#linux
+proj.linux/*
+
+#win10
+proj.win10/*
+
+#win8.1
+proj.win8.1-universal/*
+
+#
+bin/
+

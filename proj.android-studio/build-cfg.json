@@ -1,0 +1,18 @@
+{
+    "ndk_module_path" :[
+        "../cocos2d",
+        "../cocos2d/cocos",
+        "../cocos2d/external"
+    ],
+    "copy_resources": [
+        {
+            "from": "../Resources",
+            "to": ""
+        },
+        {
+            "from" : "app/jni/thirdpartyLibs",
+            "to" : "../libs/armeabi",
+            "exclude" : ["libVuforia.so"]
+        }
+    ]
+}
